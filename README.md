@@ -157,3 +157,7 @@
 ## 12. Conclusion
 
 [1. Goodbye and Next Steps](./docs/12-Conclusion/01.md)
+
+## Certificado del curso: Laravel 9 - Crea Aplicaciones y Sitios Web con PHP 8 y MVC
+
+<p align="left"><a href="https://www.udemy.com/certificate/UC-6d7943c0-efdc-485e-a884-bf205ef9b654/" target="_blank"><img src="./docs/images/UC-6d7943c0-efdc-485e-a884-bf205ef9b654.jpg" width="1000"></a></p>
