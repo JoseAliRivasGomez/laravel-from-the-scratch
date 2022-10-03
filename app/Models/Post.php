@@ -20,4 +20,10 @@ class Post extends Model
         'excerpt',
         'body',
     ];
+
+    //Alternativa para buscar por slug
+    // public function getRouteKeyName()
+    // {
+    //     return 'slug';
+    // }
 }
