@@ -5,7 +5,13 @@ use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    $posts = Post::all();
+
+    // \Illuminate\Support\Facades\DB::listen(function ($query) {
+    //     logger($query->sql, $query->bindings); //Ver SQL queries en storage/logs/laravel.log (Es mejor Clockwork)
+    // });
+
+    //$posts = Post::all();
+    $posts = Post::with('category')->get();
     return view('posts', [
         'posts' => $posts,
     ]);
