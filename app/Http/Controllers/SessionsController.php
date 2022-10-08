@@ -20,12 +20,14 @@ class SessionsController extends Controller
             'password' => 'required',
         ]);
 
-        if(auth()->attempt($attributes)){
-            return redirect('/')->with('success', 'Welcome back!');
+        if(!auth()->attempt($attributes)){
+            //throw ValidationException::withMessages(['password' => 'Your provided credentials are incorrect']);
+            return back()->withInput()->withErrors(['password' => 'Your provided credentials are incorrect']);
         }
-        
-        //throw ValidationException::withMessages(['password' => 'Your provided credentials are incorrect']);
-        return back()->withInput()->withErrors(['password' => 'Your provided credentials are incorrect']);
+
+        session()->regenerate();
+
+        return redirect('/')->with('success', 'Welcome back!');
 
     }
 
