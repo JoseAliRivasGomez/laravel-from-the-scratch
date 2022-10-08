@@ -10,4 +10,6 @@ Route::get('/posts/{post:slug}', [PostController::class, 'show'])->name('post');
 
 Route::get('/register', [RegisterController::class, 'create'])->widdleware('guest');
 Route::post('/register', [RegisterController::class, 'store'])->widdleware('guest');
-Route::post('/logout', [SessionsController::class, 'destroy']);
+Route::get('/login', [SessionsController::class, 'create'])->widdleware('guest');
+Route::post('/login', [SessionsController::class, 'store'])->widdleware('guest');
+Route::post('/logout', [SessionsController::class, 'destroy'])->widdleware('auth');
