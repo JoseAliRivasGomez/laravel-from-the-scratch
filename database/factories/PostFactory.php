@@ -20,6 +20,7 @@ class PostFactory extends Factory
             'category_id' => Category::factory(),
             'title' => $this->faker->sentence(),
             'slug' => $this->faker->slug(),
+            'thumbnail' => 'thumbnails/SQ9XZa6LvVJkWR4HVzabkeEc6XEXPrf2xYO6uZo3.jpg',
             'excerpt' => '<p>' . implode('</p><p>', $this->faker->paragraphs(2)) . '</p>',
             'body' => '<p>' . implode('</p><p>', $this->faker->paragraphs(6)) . '</p>',
         ];
